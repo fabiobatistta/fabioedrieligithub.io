@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É uma MENINA!</title>
+    <style>
+        body {
+            position: relative; /* Define a posição relativa para permitir o posicionamento absoluto dos fogos de artifício */
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 110, 161);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Garante que o body ocupe 100% da altura da tela */
+            overflow: hidden; /* Evita barras de rolagem devido aos fogos de artifício */
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image3.webp'); /* Substitua pela URL real da imagem de corações */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain; /* Ajusta a imagem para caber inteira na tela sem distorcer */
+        }
+        h1 {
+            margin-top: 43%;
+            font-size: 5em;
+            animation: blink 5s infinite;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adiciona sombreamento ao texto */
+
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, rgba(255, 105, 180, 1) 0%, rgba(255, 20, 147, 1) 100%);
+            border-radius: 50%;
+            animation: explode 1s ease-out infinite;
+        }
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(58);
+                opacity: 0;
+            }
+        }
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: rgb(180, 180, 180);
+            border: 2px solid rgb(181, 180, 180);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <h1>A nova PRINSESA da família!</h1>
+    <!-- <div class="firework-container"></div> -->
+    <a href="index.html" class="back-link">Voltar</a> <!-- Adiciona um link para voltar ao index.html -->
+
+    <script>
+        function createFirework() {
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            firework.style.left = Math.random() * 100 + 'vw';
+            firework.style.top = Math.random() * 100 + 'vh';
+            document.body.appendChild(firework);
+            setTimeout(() => {
+                firework.remove();
+            }, 1500); // Remove o elemento após a animação
+        }
+
+        setInterval(createFirework, 300); // Cria um novo fogo de artifício a cada 300ms
+    </script>
+</body>
+</html>

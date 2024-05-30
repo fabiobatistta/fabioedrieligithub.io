@@ -1,0 +1,38 @@
+#image-section img {
+    display: none;
+}
+
+#image-section img.active {
+    display: block;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .Menina {
+    color: white;
+    background-color: pink;
+    font-size: 50px;
+    
+  }
+  
+  section {
+      padding: 20px;
+      margin: 20px auto;
+      background-color: #fff; /* Branco */
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+  }
+  
+  .banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+  }

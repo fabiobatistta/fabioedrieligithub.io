@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desvendar Menino ou Menina</title>
+  <style>
+    body {
+        position: relative;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;  
+        color: white;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image1.jpg'); /* Substitua pela URL real da imagem de corações */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain; /* Ajusta a imagem para caber inteira na tela sem distorcer */
+        }
+    h1 {
+            margin-top: 45%;
+            font-size: 4em;
+            color: rgb(116, 115, 115);
+    }
+            button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            background: linear-gradient(45deg, #ff1493, #2f14ff);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(45deg, #2f14ff, #ff1493);
+            transform: scale(1.1);
+        }
+        button:active {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <h1>É menino ou menina?</h1>
+        <button onclick="window.location.href='menina.html'">Descobrir</button>
+    </div>
+  </section>
+</body>
+
+</html>
